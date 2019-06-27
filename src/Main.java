@@ -10,7 +10,17 @@ class Main {
 
     public static void main(String[] args) {
 
-        KolkoKrzyzyk gra = new KolkoKrzyzyk();
+        pesel pesel = new pesel(12345678912L);
+        pesel pesel2 = new pesel("12345678912");
+        pesel pesel3 = new pesel("98765432167");
+        assert (pesel.isMale() == true);
+        assert (pesel2.isMale() == true);
+        System.out.println(pesel2.born());
+        assert (pesel2.isCorrect() == true);
+    }
+}
+
+     /*   KolkoKrzyzyk gra = new KolkoKrzyzyk();
         gra.graj();
         gra.drukuj();
     }
@@ -38,6 +48,6 @@ class Main {
         }
         return dane;
     }
-
-}
+    }
+*/
 
